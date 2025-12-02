@@ -1,3 +1,50 @@
+# PAYA ST COFFEE — Website Rehaul (React SPA)
+
+Project created as a quiz/rehaul for the local coffee startup **PAYA ST COFFEE**.
+
+Summary
+- A single-page React application (SPA) showcasing a mobile-responsive landing page, menu, team, about, and contact pages.
+- Built with React (v19), React Bootstrap, and Bootswatch (Cosmo theme via CDN).
+- Routing handled with `react-router-dom` so navigation does not cause full page reloads.
+
+Why this rehaul
+- PAYA ST COFFEE (local coffee shop) wanted a clean, mobile-first single-page site to showcase their menu and team.
+- The rehaul focuses on: clear branding, responsive layout, easy navigation (SPA), and reusable components for menu items.
+
+Project structure (key files)
+- `src/App.js`: Main router and layout (Header/Footer + routes)
+- `src/components/Header.jsx`: Top navigation using React Bootstrap
+- `src/components/Footer.jsx`: Footer with branding
+- `src/components/ProductCard.jsx`: Reusable card for menu items
+- `src/pages/*`: `Home`, `Menu`, `About`, `Team`, `Contact`
+- `src/data/menuData.js`: Dummy menu items used by the `Menu` page
+- `src/data/teamData.js`: Dummy team members used by the `Team` page
+
+Routes
+- `/` — Landing / Home: hero and featured drinks
+- `/menu` — Menu: full menu list (dummy data)
+- `/about` — About: who they are and mission
+- `/team` — Team: team members and roles
+- `/contact` — Contact: simple contact form
+
+Assets and dummy data
+- Placeholder image paths are referenced under `/public/images/*`. Replace these with real images (shop photos, product photos).
+- Dummy names and descriptions follow typical naming and casing conventions.
+
+How to run
+1. In the `frontend` folder run:
+
+```powershell
+npm install
+npm start
+```
+
+Notes
+- Bootswatch Cosmo theme is loaded from the CDN in `public/index.html` (no local Bootswatch package required). You can swap themes by replacing that link.
+- This project is built to be a SPA — navigation uses React Router. No page reloads should occur when using the header links.
+
+Reference
+- This is a rehaul exercise; PAYA ST COFFEE is a fictional/local shop for the quiz.
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

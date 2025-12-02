@@ -7,7 +7,112 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  /* Theme colors */
+  --theme-teal: #00796b; /* teal green */
+  --theme-offwhite: #fbfbf8; /* soft off-white */
+  --theme-text: #083a34; /* dark teal-ish for text */
+
+  /* Bootstrap variable overrides (Bootstrap 5 uses CSS vars) */
+  --bs-body-bg: var(--theme-offwhite);
+  --bs-body-color: var(--theme-text);
+  --bs-primary: var(--theme-teal);
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/* Styling for Footer positioning */
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Allows the main content area to grow and push the footer down */
+}
+
+/* App-wide theme adjustments */
+body {
+  background-color: var(--theme-offwhite);
+  color: var(--theme-text);
+}
+
+.navbar, .navbar .navbar-brand {
+  background-color: var(--theme-teal) !important;
+}
+
+.navbar .nav-link {
+  color: rgba(255,255,255,0.95) !important;
+}
+
+.btn-primary {
+  background-color: var(--theme-teal) !important;
+  border-color: var(--theme-teal) !important;
+}
+
+.card {
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(8,58,52,0.06);
+}
+
+footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(0,0,0,0.06);
+}
+
+.hero-cta {
+  background-color: var(--theme-teal);
+  color: #fff;
+  border-radius: 8px;
+}
+
+/* Floating FAQ widget styles */
+.floating-faq {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1050;
+}
+
+.faq-toggle {
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.faq-card {
+  width: 320px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  border-radius: 10px;
+}
+
+@media (max-width: 576px) {
+  .faq-card { width: 92vw; right: 4vw; }
+  .floating-faq { right: 8px; left: 8px; bottom: 12px; }
+}
+
+/* Slight spacing to ensure header menu button doesn't touch the edge */
+.header-menu-button {
+  margin-right: -6px;
+}
+
+/* Header typography sizing overrides */
+.navbar .navbar-brand {
+  font-size: 1.4rem; /* larger brand */
+}
+
+.header-menu-button {
+  font-size: 1.05rem; /* slightly larger menu text */
+}
+
+@media (min-width: 992px) {
+  .navbar .navbar-brand { font-size: 1.6rem; }
+  .header-menu-button { font-size: 1.1rem; }
 }
