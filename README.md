@@ -1,4 +1,4 @@
-# PAYA ST COFFEE — Website Rehaul (React SPA)
+# PAYA ST COFFEE 
 
 Project created as a quiz/rehaul for the local coffee startup **PAYA ST COFFEE**.
 
